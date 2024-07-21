@@ -34,6 +34,11 @@ args_parser.parser.add_argument("--enable-describe-uov-image", action='store_tru
 args_parser.parser.add_argument("--always-download-new-model", action='store_true',
                                 help="Always download newer models ", default=False)
 
+# IMX arguments
+args_parser.parser.add_argument("--imx_prompt_file", type=str, default=None,
+                                help="CSV file with prompts.")
+
+
 args_parser.parser.set_defaults(
     disable_cuda_malloc=True,
     in_browser=True,
